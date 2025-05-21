@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>查詢桌號系統</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    input { padding: 8px; font-size: 16px; width: 200px; }
+    button { padding: 8px 16px; font-size: 16px; margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <h2>🔍 查詢桌號系統</h2>
+  <p>請輸入您的工號：</p>
+  <input type="text" id="empId" placeholder="例如：10903246">
+  <button onclick="redirect()">查詢</button>
+
+  <script>
+    function redirect() {
+      const id = document.getElementById("empId").value.trim();
+      if (!id) {
+        alert("請輸入工號！");
+        return;
+      }
+      const url = "https://script.google.com/macros/s/xxxxxxxxx/exec?id=" + id; // 替換成你的 Apps Script URL
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
